@@ -61,7 +61,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
 const createProduct = asyncHandler(async (req, res) => {
   try {
     const product = await Product.create(req.body);
-    res.status(500).json(product);
+    res.status(200).json(product);
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ message: error.message });
